@@ -1,0 +1,183 @@
+/* --- Global Styles --- */
+body {
+    overflow-x: hidden;
+    font-family: Segoe;
+}
+
+/* --- Navbar Custom --- */
+.custom-nav {
+    padding: 0 !important;
+    min-height: 65px;
+}
+
+.logo-video {
+    height: 80px; /* Ukuran video logo */
+    width: auto;
+    display: block;
+}
+
+/* --- Hero Section & Slides --- */
+.carousel-item {
+    height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Slide Backgrounds */
+.slide-1 {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('Samsung S26 series.jpg');
+}
+
+.slide-2 {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('Samsung S26 Ultra.webp');
+}
+
+.slide-3 {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('Samsung S26-S26+.jpg');
+}
+
+.hero-subtitle {
+    font-weight: bold;
+    text-emphasis: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Custom Nav Buttons --- */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(59, 53, 139, 0.474);
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* --- Product Cards --- */
+.product-card {
+    height: 100%;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.product-img {
+    max-height: 250px;
+    object-fit: contain;
+}
+
+/* --- Animations --- */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling Detail Spesifikasi */
+.spec-detail-container {
+    max-height: 600px; /* Batasi tinggi agar ada scroll jika terlalu panjang */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Untuk browser Firefox */
+}
+
+/* Custom Scrollbar untuk Chrome/Edge */
+.spec-detail-container::-webkit-scrollbar {
+    width: 6px;
+}
+.spec-detail-container::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.spec-detail-container h6 {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.spec-detail-container ul li {
+    font-size: 0.95rem;
+    color: #444;
+    padding-bottom: 3px;
+}
+
+.spec-detail-container {
+    height: 100%; /* Agar kotak mengikuti tinggi konten saja */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Kontrol Panah Carousel agar terlihat di background putih */
+.custom-dark-control {
+    filter: invert(1);
+    width: 5%;
+}
+
+/* Titik Warna */
+.color-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+    border: 3px solid transparent;
+}
+
+.color-dot:hover {
+    transform: scale(1.1);
+}
+
+/* Tambahkan border jika warna aktif (opsional melalui JS) */
+.color-dot.active {
+    border-color: #000;
+}
+
+#colorDisplayName {
+    transition: opacity 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.main-feature-img {
+    max-height: 450px; /* Sesuaikan dengan keinginanmu */
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+#productColorSlider {
+    margin-bottom: 0; /* Menghilangkan margin bawah default slider */
+}
+
+.cart-pics{
+    height: 0%;
+}
